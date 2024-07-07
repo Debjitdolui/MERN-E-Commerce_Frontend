@@ -5,7 +5,8 @@ import RelatedProduct from './RelatedProduct';
 
 const ProductDetail = () => {
     const { id } = useParams()
-    const url = "http://localhost:1000/api";
+  //const url = "http://localhost:1000/api";
+  const url = "https://mern-e-commerce-api-w8rk.onrender.com/api";
     const [product, setProduct] = useState();
 
     useEffect(() => {
