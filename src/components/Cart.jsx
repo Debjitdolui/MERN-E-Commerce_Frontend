@@ -25,36 +25,36 @@ const Cart = () => {
 
   return (
     <>
-      {cart?.items?.length == 0?(
-      <>
-        <div className="text-center my-5">
-          <button
-            className="btn btn-warning mx-3"
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
-            onClick={() => navigate("/")}
-          >
-            Continue Shopping...
-          </button>
-        </div>
-      </>
-      ):
-      <>
-        <div className="my-5 text-center">
-          <button
-            className="btn btn-info mx-3"
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
-          >
-            Total Qty :- {qty}
-          </button>
-          <button
-            className="btn btn-warning mx-3"
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
-          >
-            Total Price :- {price}
-          </button>
-        </div>
-      </>
-      }
+      {cart?.items?.length == 0 ? (
+        <>
+          <div className="text-center my-5">
+            <button
+              className="btn btn-warning mx-3"
+              style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+              onClick={() => navigate("/")}
+            >
+              Continue Shopping...
+            </button>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="my-5 text-center">
+            <button
+              className="btn btn-info mx-3"
+              style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+            >
+              Total Qty :- {qty}
+            </button>
+            <button
+              className="btn btn-warning mx-3"
+              style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+            >
+              Total Price :- {price}
+            </button>
+          </div>
+        </>
+      )}
       {cart?.items?.map((product) => (
         <div
           key={product._id}

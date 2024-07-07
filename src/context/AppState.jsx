@@ -9,8 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 const AppState = (props) => {
- // const url = "http://localhost:1000/api";
-  const url = "https://mern-e-commerce-api-w8rk.onrender.com/";
+  const url = "http://localhost:1000/api";
+  //const url = "https://mern-e-commerce-api-w8rk.onrender.com/api";
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -109,7 +109,7 @@ const AppState = (props) => {
     setToken(api.data.token);
     setIsAuthenticated(true);
     localStorage.setItem("token", token);
-    console.log("Token stored in localStorage:", localStorage.getItem("token"));
+   // console.log("Token stored in localStorage:", localStorage.getItem("token"));
     return api.data;
   };
 
@@ -303,7 +303,7 @@ const AppState = (props) => {
       theme: "dark",
       transition: Bounce,
     });
-    console.log(api.data);
+    //console.log(api.data);
     return api.data;
     //  setCart(api.data.cart);
     //  setUser("user cart ",api);
@@ -331,10 +331,10 @@ const AppState = (props) => {
       },
       withCredentials: true,
     });
-      console.log("user order ", api.data);
+      //console.log("user order ", api.data);
     setUserOrder(api.data);
   };
-  console.log("user order = ", userOrder);
+  //console.log("user order = ", userOrder);
 
   return (
     <AppContext.Provider

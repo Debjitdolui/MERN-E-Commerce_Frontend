@@ -70,7 +70,7 @@ const Checkout = () => {
         prefill: {
           name: "Debjit",
           email: "debjit000@gmail.com",
-          contact: "999000999",
+          contact: "",
         },
         notes: {
           address: "Kolkata,Salt Lake",
