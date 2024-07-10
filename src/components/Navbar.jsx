@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import AppContext from "../context/AppContext";
 
 const Navbar = () => {
-  const [searchTerm, setSearchTerm] = useState(" ");
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -11,7 +11,7 @@ const Navbar = () => {
   const { setFilteredData, products,logout ,isAuthenticated,cart} = useContext(AppContext);
   
   const filterbyCategory = (cat) => {
-    setFilteredData(products.filter((data)=>data.category.toLowerCase()== cat.toLowerCase()))
+    setFilteredData(products.filter((data)=>data.category.toLowerCase()===cat.toLowerCase()))
   }
 
     const filterbyPrice = (price) => {
@@ -21,7 +21,7 @@ const Navbar = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     navigate(`/product/search/${searchTerm}`)
-    setSearchTerm(" ");
+    setSearchTerm("");
   }
 
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             <h3>MERN E - Commerce</h3>
           </Link>
           <form className="search_bar" onSubmit={submitHandler}>
-            <span className="material-symbols-outlined">search</span>{" "}
+            <span className="material-symbols-outlined">search</span>
             <input
               value={searchTerm}
               type="text"
